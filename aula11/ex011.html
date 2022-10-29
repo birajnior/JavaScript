@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
     <title>NACIONALIDADE</title>
+
 </head>
+
 <body>
-    <h1>Sistema de Nacionalidade</h1>
-    Digite o País em que você nasceu: <input type="text" name="txt" id="txt">
-    <input type="button" value="verificar" onclick="verificar()">
-    <h2 id="res"></h2>
+    <section class="main">
+        <h1>Sistema de Nacionalidade</h1>
+        <div class="group">
+            <input type="text" name="txt" id="txt" onclick="apagarTexto()">
+            <label>Digite o País em que você nasceu:</label>
+        </div>
+        <input type="button" value="verificar" onclick="verificar()" id="btn">
+        <h2 id="res"></h2>
+    </section>
     <script>
         function verificar() {
             var pais = document.getElementById('txt')
             var res = document.getElementById('res')
-            var paises = String(pais.value) 
-            if (paises != 'Brasil') {
-                res.innerHTML = 'Você é estrangeiro!'
+            var paises = String(pais.value)
+            if (paises == 'Brasil' || paises == 'brasil' || paises == 'Brazil' || paises == 'brazil') {
+                res.innerHTML = 'Você é Brasileiro!'
             } else {
-                res.innerHTML = 'Você é brasileiro!'
+                res.innerHTML = 'Você é Estrangeiro!'
             }
+            var campo = document.getElementById('txt')
+            campo.value = ''
         }
+
     </script>
 </body>
+
 </html>
