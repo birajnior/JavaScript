@@ -1,6 +1,8 @@
 body {
-    background: #468eec;
-    font: normal 1.5em Arial;
+    /* background: #468eec; */
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    font: normal 1.5em Times;
 }
 
 header {
@@ -9,11 +11,32 @@ header {
 }
 
 section {
-    background: #ffffff;
+    background: #ffffffde;
     border-radius: 10px;
     padding: 15px;
     width: 500px;
     margin: auto;
+}
+
+.dados {
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: rgb(9, 9, 121);
+    background: linear-gradient(45deg, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: #ffffff;
+    border: 1px solid black;
+}
+
+.select {
+    text-align: center;
+}
+
+option {
+    font-weight: 700;
 }
 
 footer {
